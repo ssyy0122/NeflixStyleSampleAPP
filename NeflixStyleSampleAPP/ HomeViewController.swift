@@ -16,6 +16,6 @@ class HomeViewController: UICollectionViewController{
         navigationController?.hidesBarsOnSwipe = true
         
         navigationItem.leftBarButtonItem = UIBarButtonItem()
-        //
+        // a
     }
 }
