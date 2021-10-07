@@ -15,6 +15,7 @@ class HomeViewController: UICollectionViewController{
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.hidesBarsOnSwipe = true
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem()ㅂ
+        navigationItem.leftBarButtonItem = UIBarButtonItem()
+        //
     }
 }
