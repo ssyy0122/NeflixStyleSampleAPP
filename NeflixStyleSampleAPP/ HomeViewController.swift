@@ -18,5 +18,7 @@ class HomeViewController: UICollectionViewController{
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "neflix"), style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .plain, target: nil, action: nil)
+        
+        // code
     }
 }
