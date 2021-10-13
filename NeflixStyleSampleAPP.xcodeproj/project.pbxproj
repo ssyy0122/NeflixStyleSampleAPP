@@ -13,6 +13,10 @@
 		A86FBE23270DEE24004CD509 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86FBE21270DEE24004CD509 /* LaunchScreen.storyboard */; };
 		A86FBE2B270DEEE5004CD509 /*  HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86FBE2A270DEEE5004CD509 /*  HomeViewController.swift */; };
 		A86FBE2E270EF4B0004CD509 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A86FBE2D270EF4B0004CD509 /* SnapKit */; };
+		A86FBE302716F4B3004CD509 /* Content.plist in Resources */ = {isa = PBXBuildFile; fileRef = A86FBE2F2716F4B3004CD509 /* Content.plist */; };
+		A86FBE322716F520004CD509 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86FBE312716F520004CD509 /* Content.swift */; };
+		A86FBE342716FCCD004CD509 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86FBE332716FCCD004CD509 /* ContentCollectionViewCell.swift */; };
+		A86FBE3627172452004CD509 /* ContentCollctionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86FBE3527172452004CD509 /* ContentCollctionViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		A86FBE22270DEE24004CD509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A86FBE24270DEE24004CD509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A86FBE2A270DEEE5004CD509 /*  HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " HomeViewController.swift"; sourceTree = "<group>"; };
+		A86FBE2F2716F4B3004CD509 /* Content.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Content.plist; sourceTree = "<group>"; };
+		A86FBE312716F520004CD509 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		A86FBE332716FCCD004CD509 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		A86FBE3527172452004CD509 /* ContentCollctionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollctionViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +69,11 @@
 				A86FBE1F270DEE24004CD509 /* Assets.xcassets */,
 				A86FBE21270DEE24004CD509 /* LaunchScreen.storyboard */,
 				A86FBE24270DEE24004CD509 /* Info.plist */,
+				A86FBE2F2716F4B3004CD509 /* Content.plist */,
+				A86FBE312716F520004CD509 /* Content.swift */,
 				A86FBE2A270DEEE5004CD509 /*  HomeViewController.swift */,
+				A86FBE332716FCCD004CD509 /* ContentCollectionViewCell.swift */,
+				A86FBE3527172452004CD509 /* ContentCollctionViewHeader.swift */,
 			);
 			path = NeflixStyleSampleAPP;
 			sourceTree = "<group>";
@@ -132,6 +144,7 @@
 			files = (
 				A86FBE23270DEE24004CD509 /* LaunchScreen.storyboard in Resources */,
 				A86FBE20270DEE24004CD509 /* Assets.xcassets in Resources */,
+				A86FBE302716F4B3004CD509 /* Content.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +157,10 @@
 			files = (
 				A86FBE17270DEE23004CD509 /* AppDelegate.swift in Sources */,
 				A86FBE19270DEE23004CD509 /* SceneDelegate.swift in Sources */,
+				A86FBE3627172452004CD509 /* ContentCollctionViewHeader.swift in Sources */,
 				A86FBE2B270DEEE5004CD509 /*  HomeViewController.swift in Sources */,
+				A86FBE322716F520004CD509 /* Content.swift in Sources */,
+				A86FBE342716FCCD004CD509 /* ContentCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
