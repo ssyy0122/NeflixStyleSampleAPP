@@ -26,6 +26,7 @@ class HomeViewController: UICollectionViewController{
         contents = getContents()
         //CollctionView Item(Cell) 설정
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "ContentCollectionViewCell")
+        collectionView.register(ContentCollctionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ContentCollctionViewHeader")
     }
     
     func getContents() -> [Content] {
@@ -54,15 +55,28 @@ extension HomeViewController {
             
             cell.imageView.image = contents[indexPath.section].contentItem[indexPath.row].image
             return cell
-        default:
+            default:
             return UICollectionViewCell()
             
         }
     }
+    //헤더뷰설정
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader {
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ContentCollctionViewHeader", for: indexPath) as? ContentCollctionViewHeader else {fatalError("could not dequeue Header ")}
+            
+            headerView.sectionNameLabel.text = contents[indexPath.section].sectionName
+            return headerView
+        } else{
+            return UICollectionReusableView()
+        }
+    }
+    
+    //섹션 ㄱㅐ수 설정
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return contents.count
     }
-    
+
     //셀 선택
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sectionName = contents[indexPath.section].sectionName
