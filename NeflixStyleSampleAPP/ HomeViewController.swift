@@ -36,6 +36,20 @@ class HomeViewController: UICollectionViewController{
               let list = try? PropertyListDecoder().decode([Content].self, from: data) else {return[]}
             return list
     }
+    private func createBasicTypeSection() -> NSCollectionLayoutSection{
+        //item
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(0.75))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = .init(top: 10,leading: 5, bottom: 0,trailing: 5)
+        //group
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .estimated(200))
+        let group = NSCollectionLayoutGroup.horizontal( layoutSize: groupSize, subitem: item,count: 3)
+        //section
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets = .init(top: 0, leading: 5, bottom: 0, trailing: 5)
+        return section
+    }
 }
 //UICollectionview Datasource,Delegate
 extension HomeViewController {
