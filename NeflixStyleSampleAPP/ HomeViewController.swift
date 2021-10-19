@@ -29,12 +29,27 @@ class HomeViewController: UICollectionViewController{
         //CollctionView Item(Cell) 설정
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "ContentCollectionViewCell")
         collectionView.register(ContentCollctionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ContentCollctionViewHeader")
+        
+        collectionView.collectionViewLayout = layout()
     }
     
     func getContents() -> [Content] {
         guard let path = Bundle.main.path(forResource: "Content", ofType: "plist"), let data = FileManager.default.contents(atPath: path),
               let list = try? PropertyListDecoder().decode([Content].self, from: data) else {return[]}
             return list
+    }
+    //각각의 섹션 타입에 대한 UICollectionViewLayout 생성
+    private func layout() -> UICollectionViewLayout {
+        return UICollectionViewCompositionalLayout {[weak self] sectionNumber , environment -> NSCollectionLayoutSection? in
+            guard let self = self else { return nil }
+            
+            switch self.contents[sectionNumber].sectionType {
+            case  .basic:
+                return self.createBasicTypeSection()
+            default:
+                return nil
+            }
+        }
     }
     private func createBasicTypeSection() -> NSCollectionLayoutSection{
         //item
